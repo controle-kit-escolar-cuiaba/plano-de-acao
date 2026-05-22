@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMECEL · Posição Financeira 2026 — Apresentação ao Sr. Prefeito</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="faixa-topo"></div>
+
+  <!-- Link discreto para dashboard técnico (versão anterior, com QDD, MDE, FUNDEB completos) -->
+  <a class="link-tecnico" href="#" id="link-tecnico" target="_blank" title="Abre o painel completo com QDD, MDE, FUNDEB e demais dados técnicos">📊 Dados técnicos completos</a>
+
+  <div class="container">
+
+    <header class="header">
+      <div class="breadcrumb">Prefeitura Municipal de Cuiabá · Secretaria Municipal de Educação, Cultura, Esporte e Lazer</div>
+      <h1>Posição Financeira 2026</h1>
+      <div class="subtitle">Apresentação técnica ao Sr. Prefeito · Plano de execução Mai-Dez/2026</div>
+      <div class="header-meta">
+        <div><strong>Data referência</strong>21/05/2026</div>
+        <div><strong>Período de análise</strong>Maio a Dezembro 2026</div>
+        <div><strong>Autoria</strong>Equipe da SMECEL</div>
+        <div><strong>Fonte</strong>Controle financeiro interno SMECEL</div>
+      </div>
+    </header>
+
+    <!-- TESE PRINCIPAL -->
+    <div class="tese">
+      <h2>Síntese</h2>
+      <p>A SMECEL apresenta a <strong>posição consolidada das despesas e receitas projetadas para Maio a Dezembro/2026</strong>, demonstra as <strong>13 ações de contenção</strong> em execução pela equipe técnica, e submete ao Sr. Prefeito as <strong>decisões pendentes</strong> necessárias ao equilíbrio fiscal do exercício. <strong>Com o cumprimento tempestivo dos 25% do MDE</strong> (obrigação constitucional · R$ 322,60 mi) e as economias da SMECEL (R$ 32,26 mi), a Secretaria está apta a concluir o exercício 2026 em equilíbrio.</p>
+    </div>
+
+    <!-- SEÇÃO 01 · TABELA CRONOGRAMA -->
+    <section class="section" id="cronograma">
+      <span class="section-num">01 · Cronograma</span>
+      <h2>Despesas, receitas e ações da SMECEL · mês a mês</h2>
+      <p class="lead">
+        Visão integrada da execução prevista para Mai-Dez/2026. <strong>Clique nos grupos verdes</strong> para expandir/recolher a decomposição por diretoria, coordenação e item de despesa.
+      </p>
+
+      <div class="toolbar">
+        <button id="btn-exp-todas">▸ Expandir todas</button>
+        <button id="btn-rec-todas">▾ Recolher todas</button>
+        <button id="btn-imprimir">🖨 Imprimir / PDF</button>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table class="tabela-cronograma" id="tabela-cronograma">
+          <thead id="tabela-cronograma-head"></thead>
+          <tbody id="tabela-cronograma-body"></tbody>
+        </table>
+      </div>
+
+      <!-- BLOCO ADI -->
+      <div class="bloco-adi">
+        <span class="badge">⚡ AÇÃO ESTRUTURAL · IMPACTO A PARTIR DE 2027</span>
+        <h3>Criação do cargo de Auxiliar de Desenvolvimento Infantil (ADI)</h3>
+        <p class="muted">Proposta técnica para recompor a função de apoio na Educação Infantil (2.745 vagas a preencher progressivamente, sem demissões). Depende de Projeto de Lei à Câmara Municipal.</p>
+        <div class="valor">Economia projetada · R$ 69,59 mi/ano</div>
+        <p class="obs">Referência: Nota Técnica nº 04/2026/CMPE/SME-CUIABÁ · DOI 10.5281/zenodo.19791694</p>
+      </div>
+
+      <!-- CENÁRIOS RP -->
+      <div class="cenarios-rp">
+        <h3>📌 Cenários de quitação dos Restos a Pagar 2025 (R$ 147,75 mi · 194 títulos)</h3>
+        <p class="muted" style="margin-bottom: 14px; font-size: 13px;">
+          A LRF (art. 42) permite escalonamento da quitação dentro da mesma gestão. Considerando o cumprimento dos 25% MDE (R$ 322,60 mi) e as economias da SMECEL (R$ 32,26 mi), a equipe técnica apresenta três cenários viáveis para decisão do Sr. Prefeito:
+        </p>
+        <table class="cenarios-tabela">
+          <thead>
+            <tr>
+              <th>Cenário</th>
+              <th>Quitação em 2026</th>
+              <th>Parcela mensal Mai-Dez</th>
+              <th>Resultado · Saldo Mai-Dez</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>A · Quitar tudo em 2026</strong></td>
+              <td>R$ 147,75 mi</td>
+              <td>R$ 18,47 mi</td>
+              <td style="color: var(--c-danger);">⚠ Falta R$ 38,58 mi</td>
+            </tr>
+            <tr style="background: #EAF5E8;">
+              <td><strong>B · Metade em 2026, metade em 2027</strong> <small>(recomendado pela equipe técnica)</small></td>
+              <td>R$ 73,87 mi</td>
+              <td>R$ 9,23 mi</td>
+              <td style="color: var(--c-success);">✓ Sobra R$ 35,30 mi</td>
+            </tr>
+            <tr>
+              <td><strong>C · Rolar tudo para 2027</strong></td>
+              <td>R$ 0</td>
+              <td>R$ 0</td>
+              <td style="color: var(--c-success);">✓ Sobra R$ 109,17 mi</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="muted" style="margin-top: 12px; font-size: 12px;">
+          A SMECEL está pronta para executar qualquer um dos três cenários. A decisão é de governo.
+        </p>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 02 · AÇÕES DE CONTENÇÃO (TABELA) -->
+    <section class="section" id="acoes-contencao">
+      <span class="section-num">02 · Ações da SMECEL</span>
+      <h2>13 ações de contenção em execução · detalhamento</h2>
+      <p class="lead">
+        Cada ação está formalizada por instrumento próprio (apostilamento, termo de rescisão, distrato, acordo administrativo, etc.). Os valores são auditáveis nos respectivos processos administrativos.
+      </p>
+      <div id="tabela-acoes"></div>
+    </section>
+
+    <!-- SEÇÃO 03 · PEDIDOS AO PREFEITO -->
+    <section class="section" id="pedidos">
+      <span class="section-num">03 · Decisões pendentes</span>
+      <h2>Decisões que dependem de Vossa Excelência</h2>
+      <p class="lead">
+        As autorizações abaixo são necessárias para que a SMECEL conclua o exercício 2026 dentro do equilíbrio fiscal. A equipe técnica está pronta para executar cada uma delas conforme decisão de governo.
+      </p>
+      <div class="pedidos-grid" id="pedidos-grid"></div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p><strong>Secretaria Municipal de Educação, Cultura, Esporte e Lazer · Cuiabá-MT</strong></p>
+      <p>Documento técnico preparado pela equipe da SMECEL · Maio/2026</p>
+      <p>Dados baseados em controle financeiro interno · LOA 2026 · Demonstrativo FUNDEB/MDE</p>
+      <p style="margin-top: 8px; font-size: 11px;">Orçamento de referência da gestão: R$ 1,045 bi · Cumprimento MDE 25% (Tesouro): R$ 322,60 mi · Receitas vinculadas: R$ 423,55 mi (Mai-Dez)</p>
+    </footer>
+
+  </div>
+
+  <script src="dados.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>

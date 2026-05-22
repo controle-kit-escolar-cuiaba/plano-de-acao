@@ -1,0 +1,479 @@
+/* SMECEL · Apresentação Financeira 2026 — Estilos */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --c-primary: #22524C;        /* Verde institucional Cuiabá */
+  --c-primary-dark: #143832;
+  --c-primary-light: #3D7770;
+  --c-gold: #E8B53C;           /* Amarelo institucional */
+  --c-gold-light: #F5D77A;
+  --c-success: #4A8757;
+  --c-danger: #B53C3C;
+  --c-warn: #C77B2A;
+  --c-text: #1a2620;
+  --c-text-soft: #475950;
+  --c-bg: #FAFAF7;
+  --c-bg-card: #FFFFFF;
+  --c-border: #E0E5DD;
+  --c-table-stripe: #F4F6F2;
+}
+
+html, body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--c-text);
+  background: var(--c-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Faixa superior institucional */
+.faixa-topo {
+  height: 6px;
+  background: linear-gradient(90deg, var(--c-primary) 0%, var(--c-primary-light) 50%, var(--c-gold) 100%);
+}
+
+/* Container central */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* HEADER */
+.header {
+  padding: 36px 0 24px;
+  border-bottom: 1px solid var(--c-border);
+  margin-bottom: 28px;
+}
+.header .breadcrumb {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-primary);
+  font-weight: 600;
+}
+.header h1 {
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--c-primary-dark);
+  margin-top: 8px;
+  line-height: 1.15;
+}
+.header .subtitle {
+  font-size: 17px;
+  color: var(--c-text-soft);
+  margin-top: 10px;
+}
+.header-meta {
+  display: flex;
+  gap: 32px;
+  margin-top: 22px;
+  font-size: 13px;
+  color: var(--c-text-soft);
+}
+.header-meta strong { color: var(--c-text); display: block; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 4px; }
+
+/* Link discreto para dashboard técnico */
+.link-tecnico {
+  position: fixed;
+  top: 14px;
+  right: 18px;
+  background: rgba(255,255,255,0.95);
+  border: 1px solid var(--c-border);
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 12px;
+  text-decoration: none;
+  color: var(--c-text-soft);
+  z-index: 100;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+.link-tecnico:hover { background: var(--c-primary); color: white; }
+
+/* SEÇÕES */
+.section {
+  margin-bottom: 48px;
+  background: var(--c-bg-card);
+  border: 1px solid var(--c-border);
+  border-radius: 6px;
+  padding: 32px 36px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+.section-num {
+  display: inline-block;
+  background: var(--c-primary);
+  color: white;
+  padding: 2px 10px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+.section h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--c-primary-dark);
+  margin-bottom: 8px;
+}
+.section .lead {
+  font-size: 16px;
+  color: var(--c-text-soft);
+  margin-bottom: 22px;
+  max-width: 920px;
+}
+
+/* TABELA PRINCIPAL — CRONOGRAMA */
+.tabela-cronograma {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 13px;
+  margin-top: 16px;
+}
+.tabela-cronograma th {
+  background: var(--c-primary);
+  color: white;
+  padding: 10px 8px;
+  text-align: right;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  position: sticky;
+  top: 0;
+}
+.tabela-cronograma th:first-child {
+  text-align: left;
+  padding-left: 16px;
+  min-width: 280px;
+}
+.tabela-cronograma th.total-col {
+  background: var(--c-primary-dark);
+  border-left: 2px solid var(--c-gold);
+}
+.tabela-cronograma td {
+  padding: 8px;
+  text-align: right;
+  border-bottom: 1px solid var(--c-border);
+  font-variant-numeric: tabular-nums;
+}
+.tabela-cronograma td:first-child {
+  text-align: left;
+  padding-left: 16px;
+  font-weight: 500;
+}
+.tabela-cronograma td.total {
+  background: #F5F8F3;
+  font-weight: 700;
+  border-left: 2px solid var(--c-gold);
+}
+
+/* GRUPOS NA TABELA (DESPESAS / RECEITAS / ECONOMIA / FECHAMENTO) */
+.grupo-header {
+  background: var(--c-primary-light) !important;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+}
+.grupo-header td {
+  color: white;
+  padding: 12px 16px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: none;
+}
+.grupo-header td:first-child::before {
+  content: '▼';
+  display: inline-block;
+  margin-right: 8px;
+  transition: transform 0.2s;
+  font-size: 10px;
+}
+.grupo-header.colapsado td:first-child::before {
+  transform: rotate(-90deg);
+}
+.grupo-header.economia { background: var(--c-success) !important; }
+.grupo-header.economia td { color: white; }
+.grupo-header.fechamento { background: var(--c-primary-dark) !important; }
+.grupo-header.fechamento td { color: var(--c-gold); }
+
+/* SUB-NÍVEL DA TABELA (cascata) */
+.sub-row {
+  background: white;
+}
+.sub-row.coord {
+  background: #FAFCF8;
+  font-weight: 600;
+  cursor: pointer;
+}
+.sub-row.coord td:first-child {
+  padding-left: 32px;
+}
+.sub-row.coord td:first-child::before {
+  content: '▸';
+  display: inline-block;
+  margin-right: 6px;
+  transition: transform 0.2s;
+  font-size: 10px;
+  color: var(--c-primary);
+}
+.sub-row.coord.expandido td:first-child::before {
+  transform: rotate(90deg);
+}
+.sub-row.item {
+  background: white;
+  color: var(--c-text-soft);
+  font-size: 12.5px;
+}
+.sub-row.item td:first-child {
+  padding-left: 56px;
+}
+.sub-row.item td:first-child::before {
+  content: '└';
+  margin-right: 8px;
+  color: var(--c-border);
+}
+
+/* LINHA TOTAL POR GRUPO */
+.total-grupo td {
+  background: #F0F4ED;
+  font-weight: 700;
+  color: var(--c-primary-dark);
+  border-top: 2px solid var(--c-primary);
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* DESTAQUE — Receita necessária */
+.receita-necessaria td {
+  background: linear-gradient(to bottom, #FFFAEB, #FFF6D9);
+  font-weight: 700;
+  font-size: 14px;
+  border-top: 3px double var(--c-gold);
+}
+
+/* APORTE PROPOSTO */
+.aporte-proposto td {
+  background: #EEF3EE;
+  font-weight: 600;
+}
+
+/* GAP - SE FOR NEGATIVO */
+.gap-negativo td {
+  background: #FFF0F0;
+  color: var(--c-danger);
+  font-weight: 700;
+  border-top: 2px solid var(--c-danger);
+}
+.gap-negativo td:first-child {
+  color: var(--c-danger);
+}
+
+/* BLOCO ADI */
+.bloco-adi {
+  margin-top: 28px;
+  padding: 20px 24px;
+  border-left: 4px solid var(--c-gold);
+  background: linear-gradient(to right, #FFF9E6, #FFFFFF);
+  border-radius: 4px;
+}
+.bloco-adi .badge {
+  display: inline-block;
+  background: var(--c-gold);
+  color: var(--c-primary-dark);
+  padding: 3px 10px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+.bloco-adi h3 {
+  font-size: 18px;
+  color: var(--c-primary-dark);
+  margin-bottom: 6px;
+}
+.bloco-adi .valor {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--c-primary-dark);
+  margin: 8px 0;
+}
+.bloco-adi .obs {
+  font-size: 13px;
+  color: var(--c-text-soft);
+}
+
+/* CENÁRIOS RP */
+.cenarios-rp {
+  margin-top: 28px;
+  padding: 20px 24px;
+  background: #F8F9F6;
+  border-radius: 6px;
+  border: 1px solid var(--c-border);
+}
+.cenarios-rp h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: var(--c-primary-dark);
+}
+.cenarios-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.cenarios-tabela th, .cenarios-tabela td {
+  padding: 10px 12px;
+  text-align: right;
+  border-bottom: 1px solid var(--c-border);
+}
+.cenarios-tabela th:first-child, .cenarios-tabela td:first-child {
+  text-align: left;
+}
+.cenarios-tabela th {
+  background: var(--c-primary-light);
+  color: white;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+/* PEDIDOS */
+.pedidos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 18px;
+}
+.pedido {
+  display: grid;
+  grid-template-columns: 50px 1fr 220px;
+  gap: 18px;
+  padding: 16px 20px;
+  background: var(--c-bg-card);
+  border: 1px solid var(--c-border);
+  border-left: 4px solid var(--c-primary);
+  border-radius: 4px;
+  align-items: center;
+}
+.pedido .num {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--c-primary);
+  text-align: center;
+}
+.pedido .titulo {
+  font-weight: 600;
+  color: var(--c-primary-dark);
+  margin-bottom: 4px;
+}
+.pedido .detalhe {
+  font-size: 13px;
+  color: var(--c-text-soft);
+  line-height: 1.4;
+}
+.pedido .valor-pedido {
+  text-align: right;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--c-primary-dark);
+}
+.pedido .instrumento {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-text-soft);
+  margin-top: 4px;
+}
+
+/* RESUMO TESE NO TOPO */
+.tese {
+  background: linear-gradient(135deg, var(--c-primary-dark), var(--c-primary));
+  color: white;
+  padding: 32px 40px;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+.tese h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--c-gold-light);
+}
+.tese p {
+  font-size: 18px;
+  line-height: 1.5;
+  max-width: 1000px;
+}
+.tese strong {
+  color: var(--c-gold-light);
+}
+
+/* TOOLBAR DE AÇÕES NA TABELA */
+.toolbar {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0;
+}
+.toolbar button {
+  padding: 6px 14px;
+  background: white;
+  border: 1px solid var(--c-border);
+  border-radius: 3px;
+  font-size: 12px;
+  cursor: pointer;
+  color: var(--c-text);
+}
+.toolbar button:hover {
+  background: var(--c-primary);
+  color: white;
+  border-color: var(--c-primary);
+}
+
+/* FOOTER */
+.footer {
+  margin: 60px 0 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--c-border);
+  text-align: center;
+  font-size: 12px;
+  color: var(--c-text-soft);
+  line-height: 1.6;
+}
+
+/* RESPONSIVO BÁSICO */
+@media (max-width: 1100px) {
+  .tabela-cronograma { font-size: 11px; }
+  .tabela-cronograma th, .tabela-cronograma td { padding: 6px; }
+  .pedido { grid-template-columns: 40px 1fr; }
+  .pedido .valor-pedido { grid-column: 1 / -1; text-align: left; }
+}
+
+/* IMPRESSÃO */
+@media print {
+  .link-tecnico, .toolbar { display: none; }
+  .grupo-header.colapsado + tr, .grupo-header.colapsado ~ tr { display: table-row !important; }
+  .sub-row { display: table-row !important; }
+  .section { box-shadow: none; border: 1px solid #ccc; page-break-inside: avoid; }
+  body { background: white; }
+}
+
+/* PEQUENOS UTILITÁRIOS */
+.muted { color: var(--c-text-soft); }
+.right { text-align: right; }
+.bold { font-weight: 700; }
+.tag-status {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.tag-status.exec { background: #E0F0E0; color: var(--c-success); }
+.tag-status.neg { background: #FFF3E0; color: var(--c-warn); }
+.tag-status.aquis { background: #E8E8FF; color: #4444AA; }
