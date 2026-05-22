@@ -2507,6 +2507,54 @@ window.DADOS = {
         "DEZEMBRO": 29925
       },
       "status": "Em execução"
+    },
+    {
+      "id": "mentorias",
+      "nome": "Mentorias pedagógicas e técnicas — protocolo virtual",
+      "descricao": "Transformação do protocolo de mentorias das assessorias pedagógicas e técnicas para o formato virtual, com economia de combustível e logística.",
+      "instrumento": "Decisão administrativa interna",
+      "periodo": "A partir de Junho",
+      "mes_inicio": "JUNHO",
+      "valor_mensal": 20000,
+      "economia_meses": {
+        "JANEIRO": 0,
+        "FEVEREIRO": 0,
+        "MARÇO": 0,
+        "ABRIL": 0,
+        "MAIO": 0,
+        "JUNHO": 20000,
+        "JULHO": 20000,
+        "AGOSTO": 20000,
+        "SETEMBRO": 20000,
+        "OUTUBRO": 20000,
+        "NOVEMBRO": 20000,
+        "DEZEMBRO": 20000
+      },
+      "status": "Em execução"
+    },
+    {
+      "id": "realocacao",
+      "nome": "Realocação de professores efetivos",
+      "descricao": "Realocação de professores efetivos em salas de recomposição (contraturnos). Não há redução de salas — apenas otimização do quadro de pessoal.",
+      "instrumento": "Decisão administrativa interna",
+      "periodo": "A partir de Junho",
+      "mes_inicio": "JUNHO",
+      "valor_mensal": 140000,
+      "economia_meses": {
+        "JANEIRO": 0,
+        "FEVEREIRO": 0,
+        "MARÇO": 0,
+        "ABRIL": 0,
+        "MAIO": 0,
+        "JUNHO": 140000,
+        "JULHO": 140000,
+        "AGOSTO": 140000,
+        "SETEMBRO": 140000,
+        "OUTUBRO": 140000,
+        "NOVEMBRO": 140000,
+        "DEZEMBRO": 140000
+      },
+      "status": "Em execução"
     }
   ],
   "economia_por_mes": {
@@ -2515,16 +2563,16 @@ window.DADOS = {
     "MARÇO": 0,
     "ABRIL": 0,
     "MAIO": 359000,
-    "JUNHO": 2369870.0,
-    "JULHO": 4845815.0,
-    "AGOSTO": 4969815.0,
-    "SETEMBRO": 4929815.0,
-    "OUTUBRO": 4929815.0,
-    "NOVEMBRO": 4929815.0,
-    "DEZEMBRO": 4929815.0
+    "JUNHO": 2529870.0,
+    "JULHO": 5005815.0,
+    "AGOSTO": 5129815.0,
+    "SETEMBRO": 5089815.0,
+    "OUTUBRO": 5089815.0,
+    "NOVEMBRO": 5089815.0,
+    "DEZEMBRO": 5089815.0
   },
-  "economia_anual": 32263760.0,
-  "economia_mai_dez": 32263760.0,
+  "economia_anual": 33383760.0,
+  "economia_mai_dez": 33383760.0,
   "pedidos": [
     {
       "num": 1,
